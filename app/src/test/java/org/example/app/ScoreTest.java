@@ -22,4 +22,10 @@ public class ScoreTest {
         int numbers [] = {1, 7, 2, 6};
         assertEquals(16, Score.sumOfPinsInFrame(numbers));
     }
+    @Test
+    @DisplayName("Test score sum of 6 integers")
+    public void testSumOfPinsInThirdFrame(){
+        int numbers [] = {1, 7, 2, 6, 1, 0};
+        assertEquals(17, Score.sumOfPinsInFrame(numbers));
+    }
 }

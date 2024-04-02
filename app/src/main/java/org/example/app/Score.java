@@ -14,8 +14,10 @@ public class Score {
     public static int sumOfPinsInFrame(int [] nums){
         if (nums.length == 2){
             return nums[0] + nums[1];
+        }else if(nums.length == 4){
+            return nums[0] + nums[1] + nums[2] + nums[3];
         }
-        return nums[0] + nums[1] + nums[2] + nums[3];
+        return nums[0] + nums[1] + nums[2] + nums[3] + nums[4] + nums[5];
         
     }
     public static void main(String[] args) {
