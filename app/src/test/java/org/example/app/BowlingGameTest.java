@@ -15,4 +15,10 @@ public class BowlingGameTest {
     public void canMakeGame(){
         new BowlingGame();
     }
+    @Test
+    @DisplayName("Can roll pins")
+    public void canRollPins(){
+        BowlingGame game = new BowlingGame();
+        game.roll(0);
+    }
 }
