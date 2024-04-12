@@ -48,6 +48,16 @@ public class BowlingGameTest {
         assertEquals(22, game.score());
     }
 
+    @Test
+    @DisplayName("Can score a game of strike followed by two four's")
+    public void canScoreAgameOfStrike(){
+        game.roll(10);
+        game.roll(4);
+        game.roll(4);
+        roll(17, 0);
+        assertEquals(26, game.score());
+    }
+
     private void roll(int times, int pinsHit){
         for (int i = 0; i<times; i++){
             game.roll(pinsHit);

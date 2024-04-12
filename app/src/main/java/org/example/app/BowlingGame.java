@@ -19,8 +19,11 @@ public class BowlingGame {
         int score = 0;
         int frameIndex = 0;
         for (int frame = 0; frame < 10; frame++){
-            
-            if (isSpare(frameIndex)){// check if spare
+            if (rolls[frameIndex] == 10){ //check strike
+                score += 10 + rolls[frameIndex+1] + rolls[frameIndex+2];
+                frameIndex++;
+
+            }else if (isSpare(frameIndex)){// check if spare
                 score += 10 + rolls[frameIndex+2]; // sum of the total in fram (10) plus the score of the next roll
                 frameIndex += 2;
             }else{
@@ -35,4 +38,5 @@ public class BowlingGame {
     private boolean isSpare(int frameIndex){
         return rolls[frameIndex] + rolls[frameIndex + 1]== 10;
     }
+    
 }
