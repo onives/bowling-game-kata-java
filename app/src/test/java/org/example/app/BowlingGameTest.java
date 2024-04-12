@@ -27,15 +27,20 @@ public class BowlingGameTest {
     @Test
     @DisplayName("Can score a gutter game")
     public void canScoreGutterGame(){
+        roll(20, 0);
         assertEquals(0, game.score());
     }
 
     @Test
     @DisplayName("Can score a game of ones")
     public void canScoreAgameOfOnes(){
-        for (int i = 0; i<20; i++){
-            game.roll(1);
-        }
+        roll(20, 1);
         assertEquals(20, game.score());
+    }
+    
+    private void roll(int times, int pinsHit){
+        for (int i = 0; i<times; i++){
+            game.roll(pinsHit);
+        }
     }
 }
