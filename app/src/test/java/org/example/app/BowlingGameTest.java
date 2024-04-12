@@ -37,7 +37,17 @@ public class BowlingGameTest {
         roll(20, 1);
         assertEquals(20, game.score());
     }
-    
+
+    @Test
+    @DisplayName("Can score a game of spare followed by a 6")
+    public void canScoreAgameOfSpare(){
+        game.roll(4);
+        game.roll(6);
+        game.roll(6);
+        roll(17, 0);
+        assertEquals(22, game.score());
+    }
+
     private void roll(int times, int pinsHit){
         for (int i = 0; i<times; i++){
             game.roll(pinsHit);
