@@ -15,6 +15,9 @@ public class ScoreTest {
         int numbers [] = {1, 7};
         assertEquals(8, Score.sumOfPinsInFrame(numbers));
     }
+
+    // The tests below this line don't test anything new (at least not anymore; perhaps they once
+    // did in an earlier form of the code).  They can be safely removed.
     @Test
     @DisplayName("Test score sum of 4 integers")
     public void testSumOfPinsInSecondFrame(){

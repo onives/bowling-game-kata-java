@@ -30,14 +30,17 @@ public class BowlingGameTest {
         assertEquals(0, game.score());
     }
 
-    @Test
+    @Test //Good test for the base case
     @DisplayName("Can score a game of ones")
     public void canScoreAgameOfOnes(){
         roll(20, 1);
         assertEquals(20, game.score());
     }
 
-    @Test
+    @Test //Good test case for a spare
+    //Nice use of a display name, but you might make change the wording to describe the behavior
+    //("it scores a spare as 10 plus the value of the next ball") instead of the specific test case
+    //used ("it scores a spare followed by a 6")
     @DisplayName("Can score a game of spare followed by a 6")
     public void canScoreAgameOfSpare(){
         game.roll(4);
@@ -47,7 +50,7 @@ public class BowlingGameTest {
         assertEquals(22, game.score());
     }
 
-    @Test
+    @Test //Good test case for a strike
     @DisplayName("Can score a game of strike followed by two four's")
     public void canScoreAgameOfStrike(){
         game.roll(10);
