@@ -2,8 +2,7 @@
  * This is a comment.
  */
 
-package test.java.org.example.app;
-import org.example.app.Score;
+package org.example.app;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;

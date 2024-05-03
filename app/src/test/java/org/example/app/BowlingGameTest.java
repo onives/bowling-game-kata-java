@@ -1,10 +1,9 @@
 /*
  * This is a comment.
 */
-package test.java.org.example.app;
+package org.example.app;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.BeforeEach;
-import org.example.app.BowlingGame;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
